@@ -4,10 +4,12 @@ Fabric script based on the file 1-pack_web_static.py that distributes an
 archive to the web servers
 """
 
-from fabric.api import put, run, env
+from fabric.api import put, run, env, sudo
 from os.path import exists
-env.hosts = ['142.44.167.228', '144.217.246.195']
-
+env.hosts = ['54.82.132.243', '54.157.160.87']
+env.user = "ubuntu"
+env.key_filename = "~/.ssh/school"
+env.password = "betty"
 
 def do_deploy(archive_path):
     """distributes an archive to the web servers"""
