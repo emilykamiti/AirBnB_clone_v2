@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """ Function that deploys """
 from datetime import datetime
-from fabric.api import *
 import os
 import shlex
 
 
-rom fabric.api import put, run, env, sudo
+from fabric.api import put, run, env, sudo
 from os.path import exists
 env.hosts = ['54.82.132.243', '54.157.160.87']
 env.user = "ubuntu"
